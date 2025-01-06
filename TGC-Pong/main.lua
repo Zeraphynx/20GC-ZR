@@ -8,7 +8,7 @@ function love.load()
     player.y = 10
     player.width = 10
     player.height = 100
-    player.speed = 300
+    player.speed = 800
     player.score = 0
 
     enemy = {}
@@ -131,7 +131,7 @@ end
 
 function love.draw()
     love.graphics.setColor(1,1,1)
-    --love.graphics.rectangle('fill', player.x, player.y, player.width, player.height)
+    love.graphics.rectangle('fill', player.x, player.y, player.width, player.height)
     love.graphics.rectangle('fill', enemy.x, enemy.y, enemy.width, enemy.height)
     love.graphics.rectangle('fill', ball.x, ball.y, ball.width, ball.height)
     love.graphics.rectangle('fill', ball.x+ball.speedx*10*math.sin(ball.vector)+2.5, ball.y+ball.speedy*10*math.cos(ball.vector)+2.5, 5, 5)
